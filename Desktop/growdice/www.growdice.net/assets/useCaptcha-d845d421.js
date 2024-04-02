@@ -1,1 +1,0 @@
-import{R as s,az as r}from"./index-c4efdbaa.js";const n=()=>{const t=s.useRef(null),[c,a]=s.useState("");return{captchaProps:{sitekey:r,theme:"dark",ref:t,onVerify:e=>{a(e)}},captchaToken:c,resetCaptcha:()=>{var e;(e=t.current)==null||e.resetCaptcha(),a("")}}};export{n as u};

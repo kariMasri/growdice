@@ -1,1 +1,0 @@
-import{R as u,m as r,f as t}from"./index-c4efdbaa.js";const s=(e,c)=>{const n=u.useRef(r.activeCurrency);u.useEffect(()=>{n.current!=r.activeCurrency&&(r.activeCurrency==t.WL?c(e*100):c(e/100)),n.current=r.activeCurrency},[r.activeCurrency])};export{s as u};

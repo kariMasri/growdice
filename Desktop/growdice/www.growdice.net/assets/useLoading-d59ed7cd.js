@@ -1,1 +1,0 @@
-import{R as t,j as i}from"./index-c4efdbaa.js";import{C as r}from"./ClipLoader-f3413bad.js";const d=(e,a=i(r,{size:20,color:"white"}))=>{const[o,s]=t.useState(!1);return{loadingElement:o?a:e,loading:o,setLoading:s}};export{d as u};
