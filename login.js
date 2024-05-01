@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var password = document.getElementById("password").value;
 
     // Send login request to the server
-    fetch('https://instgram.com/login', {
+    fetch('/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
