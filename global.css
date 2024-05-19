@@ -3589,7 +3589,6 @@ body,html {
     height: 100%;
     background-color: var(--backround-color);
     color: var(--text-color);
-    font-family: MontSerrat,"sans-serif";
+font-family: ui-sans-serif, system-ui, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
     overscroll-behavior: none;
 }
-
